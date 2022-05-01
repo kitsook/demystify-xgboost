@@ -220,7 +220,7 @@ c.NotebookApp.ip = '*'
 #c.NotebookApp.kernel_spec_manager_class = 'jupyter_client.kernelspec.KernelSpecManager'
 
 ## The full path to a private key file for usage with SSL/TLS.
-c.NotebookApp.keyfile = u'/home/ml-user/mycert.pem'
+c.NotebookApp.keyfile = u'/home/ml-user/mykey.key'
 
 ## Hostnames to allow as local when allow_remote_access is False.
 #  
@@ -278,7 +278,8 @@ c.NotebookApp.open_browser = False
 #    from notebook.auth import passwd; passwd()
 #  
 #  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = '<put your password hash here starting with sha1:>'
+# FOR TESTING PURPOSE ONLY!!! password is 'password'
+c.NotebookApp.password = 'argon2:$argon2id$v=19$m=10240,t=10,p=8$S0NsAL2R6FCzDV9DLQzH4g$Xy4KM24jEjab4o47EOWbaciNPzGm8X0Y9bhgCN2cyiU'
 
 ## Forces users to use a password for the Notebook server. This is useful in a
 #  multi user environment, for instance when everybody in the LAN can access each
